@@ -4,7 +4,7 @@ let img = document.getElementsByClassName('vhs1')[0];
 let img2 = document.getElementsByClassName('vhs')[0];
 console.log(img2.src);
 let condt = false;
-table.addEventListener('click', function (event) {
+table.onclick = function (event) {
   condt = !condt;
   if (condt === true) {
     img.src =
@@ -18,14 +18,14 @@ table.addEventListener('click', function (event) {
       'https://deutsch-mit-rieke.de/wp-content/uploads/2020/10/DeutschmitRiekeLogo1200_neu.png';
   }
   console.log(condt);
-});
+};
 
 const btn = document.querySelector('#btn');
 const main = document.querySelector('#main');
 
 const iframe = document.querySelectorAll('iframe');
 
-btn.addEventListener('click', function (event) {
+btn.onclick = () => {
   [...iframe].forEach((el) => {
     el.style.display = 'block';
   });
@@ -33,5 +33,5 @@ btn.addEventListener('click', function (event) {
   btn.style.display = 'none';
 
   console.log('merhaba');
-});
+};
 console.log(document.querySelector('.table .table-deutsch tr th img'));
